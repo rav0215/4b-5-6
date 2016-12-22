@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct book
+{
+	char title [15];
+	char author[15];
+	int value;
+};
+int main() {
+	struct book libry[3];
+	int i;
+	system("chcp 1251");
+	system("cls");
+	for (i = 0; i < 3; i++)
+	{
+		printf("enter name % of the book:", i + 1);
+		gets(libry[i].title);
+		printf("enter author % of the book:", i + 1);
+		gets(libry[i].author);
+		printf("enter price % of the book:", i + 1);
+		scanf("%d", &libry[i].value);
+		getchar();
+	}
+	for (i = 0; i < 3; i++)
+	{
+		printf("\n %d. %s", i + 1, libry[i].author);
+		printf("%s %d", libry[i].title, libry[i].value);
+	}
+	getchar();
+	return 0;
+}
