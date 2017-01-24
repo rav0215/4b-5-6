@@ -1,0 +1,33 @@
+#include <windows.h>
+#include <list>
+ 
+int main()
+{
+    std::list<int> l = { 0,1,2,3,-5,-9 };
+    std::list<int> lRes{};
+ 
+    for (auto it : l)
+    {
+        if (it < 0) {
+ 
+            lRes.push_front(it);
+        }
+        else
+        {
+            lRes.push_back(it);
+        }
+ 
+    }
+ 
+    for (auto it : lRes) {
+ 
+        printf_s("%d\n", it);
+    }
+ 
+    while (true)
+    {
+        Sleep(1);
+    }
+    
+    return 0;
+}
